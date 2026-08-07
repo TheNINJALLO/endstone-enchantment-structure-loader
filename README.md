@@ -20,8 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> &bull;
-  <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#what-it-does">What it does</a> &bull;
+  <a href="#how-to-use">How to use</a> &bull;
+  <a href="#commands-and-permissions">Commands</a> &bull;
   <a href="#install">Install</a> &bull;
   <a href="https://github.com/TheNINJALLO/endstone-enchantment-structure-loader/releases">Releases</a>
 </p>
@@ -30,9 +31,22 @@
 
 Automatically converts special enchantment items into structures. This release is aligned with Endstone 0.11.8 and Minecraft Bedrock Dedicated Server 1.26.40, and is distributed as a Python wheel for direct installation in an Endstone server.
 
-## Capabilities
+## What it does
 
--
+- Maps special custom enchantment items to named Bedrock structures.
+- Scans online player inventories once per second, consumes a matching item, and loads its structure at that player's location.
+- Handles Overworld, Nether, End, and custom-dimension structure commands.
+
+## How to use
+
+1. Install the behavior/resource content that provides the mapped `z:*` enchantment items and the referenced structure files.
+2. Start Endstone and verify the log reports the expected number of monitored enchantment items.
+3. Give a mapped item to a player; within one scan cycle it is consumed and the matching structure is loaded at the player.
+4. Back up the world before testing new structure mappings because activation changes blocks at the player's location.
+
+## Commands and permissions
+
+This plugin has no commands. It activates automatically when a mapped custom enchantment item appears in an online player's inventory.
 
 ## Compatibility
 
